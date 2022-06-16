@@ -1,11 +1,12 @@
 # CAD-Few-Shot-Classification
-### Official Pytorch Implementation of '[CAD: Co-Adapting Discriminative Features for Improved Few-Shot Classification](https://arxiv.org/abs/2203.13465)' (CVPR 2022)
+### Official Pytorch Implementation of '[CAD: Co-Adapting Discriminative Features for Improved Few-Shot Classification](https://openaccess.thecvf.com/content/CVPR2022/papers/Chikontwe_CAD_Co-Adapting_Discriminative_Features_for_Improved_Few-Shot_Classification_CVPR_2022_paper.pdf)' (CVPR 2022)
+
 
 > **CAD: Co-Adapting Discriminative Features for Improved Few-Shot Classification**<br>
 > Philip Chikontwe, Soopil Kim, Sang Hyun Park (DGIST)
 >
-> Paper: https://arxiv.org/abs/2203.13465
->
+![Structure of CAD](overview.png)
+
 > **Abstract:** *Few-shot classification is a challenging problem that aims to learn a model that can adapt to unseen classes given a few labeled samples. Recent approaches pre-train a feature extractor, and then fine-tune for episodic meta-learning. Other methods leverage spatial features to learn pixel-level correspondence while jointly training a classifier. However, results using such approaches show marginal improvements. In this paper, inspired by the transformer style self-attention mechanism, we propose a strategy to cross-attend and re-weight discriminative features for few-shot classification. Given a base representation of support and query images after global pooling, we introduce a single shared module that projects features and cross-attends in two aspects: (i) query to support, and (ii) support to query. The module computes attention scores between features to produce an attention pooled representation of features in the same class that is later added to the original representation followed by a projection head. This effectively re-weights features in both aspects (i & ii) to produce features that better facilitate improved metric-based meta-learning. Extensive experiments on public benchmarks show our approach outperforms state-of-the-art methods by 3%~5%.*
 
 
@@ -53,11 +54,13 @@ Our implementation builds upon several existing publicly available code.
 If you find this code useful, please cite our paper.
 
 ~~~~
-@article{chikontwe2022cad,
-  title={CAD: Co-Adapting Discriminative Features for Improved Few-Shot Classification},
-  author={Chikontwe, Philip and Kim, Soopil and Park, Sang Hyun},
-  journal={arXiv preprint arXiv:2203.13465},
-  year={2022}
+@InProceedings{Chikontwe_2022_CVPR,
+    author    = {Chikontwe, Philip and Kim, Soopil and Park, Sang Hyun},
+    title     = {CAD: Co-Adapting Discriminative Features for Improved Few-Shot Classification},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {14554-14563}
 }
 ~~~~
 
